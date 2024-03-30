@@ -18,25 +18,29 @@ public class ScreenTimeTrackerNonOOP {
 			screenTime = keyboard.nextInt();
 			screenTimes[i] = screenTime;
 		}
-
+		
 		keyboard.close();
 
 		int minScreenTime = screenTimes[0];
+		int minScreenTimeDay = -1;
 		int maxScreenTime = screenTimes[0];
+		int maxScreenTimeDay = -1;
 
 		for (int i = 0; i < 21; i++) {
 			if(screenTimes[i] < minScreenTime) {
 				minScreenTime = screenTimes[i];
+				minScreenTimeDay = i + 1;
 			}
 			if(screenTimes[i] > maxScreenTime) {
 				maxScreenTime = screenTimes[i];
+				maxScreenTimeDay = i + 1;
 			}
 		}
 		
 		// Print results
-		System.out.printf("Minimum time spent in front of computer is %d.\n", minScreenTime);
+		System.out.printf("Minimum time spent in front of computer is %d, on day %d.\n", minScreenTime, minScreenTimeDay);
 
-		System.out.printf("Maximum time spent in front of computer is %d.\n", maxScreenTime);
+		System.out.printf("Maximum time spent in front of computer is %d, on day %d.\n", maxScreenTime, maxScreenTimeDay);
 	}
 
 }
