@@ -19,6 +19,8 @@ public class ScreenTimeTrackerNonOOP {
 			screenTimes[i] = screenTime;
 		}
 
+		keyboard.close();
+
 		int minScreenTime = screenTimes[0];
 		int maxScreenTime = screenTimes[0];
 
